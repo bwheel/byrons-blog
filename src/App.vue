@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { isHTMLTag } from '@vue/shared';
 import { ref } from 'vue';
 const isHidden = ref(true);
 const videoRef = ref<HTMLVideoElement | null>(null);
@@ -26,5 +25,27 @@ const handleHide = () => {
 </template>
 
 <style scoped>
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+button {
+    border-radius: 5px;
+    font-size: x-large;
+    color: var(--bb-black);
+    background-color: var(--bb-old-gold);
+    border-color: transparent;
+}
+
+video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
 </style>
